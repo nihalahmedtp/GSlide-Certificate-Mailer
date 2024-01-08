@@ -1,4 +1,4 @@
-# Certificate Generation Script
+# Certificate Generation and Mailer Script
 
 This script automates the generation of personalized certificates using a Google Slide template and a Google Spreadsheet containing recipient data. It creates individualized certificates, saves them as PDFs, and emails them to the respective recipients.
 
