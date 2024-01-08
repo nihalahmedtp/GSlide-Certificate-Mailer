@@ -34,7 +34,3 @@ Before running the script, ensure you have the following:
 ## Contributors
 
 - Your Name (@nihalahmedtp)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
