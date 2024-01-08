@@ -1,58 +1,40 @@
-# Certificate Generator
+# Certificate Generation Script
 
-This script automates the creation of personalized certificates using a Google Slide template and data from a Google Spreadsheet. It generates individual certificates, saves them as PDFs, and emails them to recipients.
+This script automates the generation of personalized certificates using a Google Slide template and a Google Spreadsheet containing recipient data. It creates individualized certificates, saves them as PDFs, and emails them to the respective recipients.
 
-## Setup
+## Prerequisites
 
-1. **Google Drive Setup**:
-   - Create a dedicated folder in Google Drive to organize the Slide template and Spreadsheet.
-   - Obtain the IDs for the folder, Slide template, and Spreadsheet.
-  
-2. **Google Apps Script**:
-   - Copy the provided script into a Google Apps Script project.
-   - Replace placeholder IDs in the script with your actual Drive and Spreadsheet IDs.
+Before running the script, ensure you have the following:
 
-3. **Configuration**:
-   - Ensure the Spreadsheet contains a column with recipient names and another with their corresponding emails.
-   - Customize the email subject and body as needed in the script.
+- **Google Account:** The script utilizes Google Apps Script and requires access to Google Drive, Google Slides, and Google Sheets.
+- **Google Slide Template:** Create a template slide with placeholders (e.g., `{{name}}`) to be replaced with recipient names. Obtain the Slide ID to be used in the script.
+- **Google Spreadsheet:** Prepare a spreadsheet containing recipient data, including names and email addresses. Obtain the Spreadsheet ID to be used in the script.
 
 ## Usage
 
-1. **Prepare Data**:
-   - Populate the Google Spreadsheet with recipient names and their associated email addresses.
+1. Clone or download the repository to your local machine.
+2. Upload the following to your Google Drive:
+   - **Google Slide Template:** Upload your Slide template to Google Drive.
+   - **Google Spreadsheet:** Upload your Spreadsheet containing recipient data to Google Drive.
+3. Retrieve the necessary IDs:
+   - Replace `<slide_id>` with the ID of your Slide template.
+   - Replace `<sheet_id>` with the ID of your Spreadsheet.
+   - Replace `<destination_folder_id>` with the ID of the folder to save generated PDFs.
+4. Open `generateCertificates()` function in the script file and replace the placeholder IDs with your actual IDs.
+5. Run the script:
+   - Copy the script into Google Apps Script editor.
+   - Run the `generateCertificates()` function to execute the certificate generation process.
 
-2. **Run Script**:
-   - Execute the `generateCertificates()` function in the Apps Script interface.
+## Note
 
-3. **Generated Certificates**:
-   - Certificates will be saved as PDFs in the specified destination folder in Google Drive.
-   - Recipients will receive an email with their certificate attached.
+- Ensure the Spreadsheet structure matches the script's expectations.
+- The first sheet of the Spreadsheet is considered as the data source.
+- The script assumes the first row of the sheet contains headers and skips it.
 
-## Additional Details
+## Contributors
 
-- **Spreadsheet Structure**:
-  - The script assumes that the first sheet of the Spreadsheet contains the recipient data and the first row contains headers (e.g., "Name", "Email").
-
-- **Slide Template**:
-  - The script replaces placeholders in the Slide template (e.g., "{{name}}") with recipient names.
-
-- **Permissions**:
-  - Grant necessary permissions for Google Drive and Gmail services to allow the script to access and modify files and send emails.
-
-- **Error Handling**:
-  - The script might need modifications for robust error handling based on specific use cases or exceptional situations.
-
-- **Disclaimer**:
-  - This script is provided as-is without any warranty. Review and use it responsibly.
-
-## Contributing
-
-Contributions, improvements, and feature requests are welcome! Feel free to fork the repository and submit pull requests.
+- Your Name (@nihalahmedtp)
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
-
-## Acknowledgments
-
-- This script was inspired by [mention any inspirations or resources if applicable].
+This project is licensed under the [MIT License](LICENSE).

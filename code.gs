@@ -5,13 +5,11 @@
 
 function generateCertificates() {
   // Replace placeholders with actual IDs
-  var folderId = '<current_folder_id>'; // ID of the folder containing the Slide and Spreadsheet
   var slideId = '<slide_id>'; // ID of the Slide template
   var spreadsheetId = '<sheet_id>'; // ID of the Spreadsheet
   var destinationFolderId = '<destination_folder_id>'; // ID of the destination folder for PDF certificates
 
   // Accessing necessary resources
-  var folder = DriveApp.getFolderById(folderId);
   var destinationFolder = DriveApp.getFolderById(destinationFolderId);
   var slide = DriveApp.getFileById(slideId);
   var spreadsheet = SpreadsheetApp.openById(spreadsheetId);
