@@ -31,6 +31,5 @@ Before running the script, ensure you have the following:
 - The first sheet of the Spreadsheet is considered as the data source.
 - The script assumes the first row of the sheet contains headers and skips it.
 
-## Contributors
 
-- Your Name (@nihalahmedtp)
+- @nihalahmedtp
